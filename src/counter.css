@@ -1,0 +1,18 @@
+.counter{
+    background-color: gray;
+    width: 200px;
+    font-size: 4rem;
+    padding: 1em;
+}
+
+.chips-input{
+    
+    min-width: 400px;
+    width: 50vw;
+    padding-bottom: 1.5em;
+}
+
+.input-field{
+    width: 40vw;
+    margin: 2em;
+}
