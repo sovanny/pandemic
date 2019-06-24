@@ -23,10 +23,12 @@ export class Counter extends React.Component {
 }
 export class AddToken extends React.Component {
     render(){
-        return (
+        return ( 
+        <div className="btn-container">
             <Button variant="contained" color="primary" className="token-btn" onClick={handleClick(this.props)}>
             {startTextBtn(this.props.isStarted)}
             </Button>
+        </div>
         )
     }
 }

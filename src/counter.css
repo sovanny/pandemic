@@ -11,8 +11,12 @@
     min-width: 400px;
     width: 50vw;
     padding-bottom: 1.5em;
+    text-align: center;
 }
 
+.btn-container{
+    display: inherit;
+}
 
 .token-btn{
     color: rgb(104,69,135);
@@ -25,7 +29,7 @@
     .game-start {
       display: inherit;
     }
-    .token-btn{
+    .btn-container{
         display: none;
     }
   }
