@@ -1,18 +1,31 @@
 .counter{
-    background-color: gray;
+    /*background-color: rgb(198,197,187);*/
     width: 200px;
     font-size: 4rem;
     padding: 1em;
+    margin: 0.2em;
 }
 
-.chips-input{
-    
+.game-start{
+    display: none;
     min-width: 400px;
     width: 50vw;
     padding-bottom: 1.5em;
 }
 
-.input-field{
-    width: 40vw;
-    margin: 2em;
+
+.token-btn{
+    color: rgb(104,69,135);
+    width: 75vw;
+    height: 20vh;
+    font-size: 3rem;
 }
+
+@media only screen and (min-width: 768px) {
+    .game-start {
+      display: inherit;
+    }
+    .token-btn{
+        display: none;
+    }
+  }

@@ -1,26 +1,12 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import './counter.css';
 
-export class ChipsInput extends React.Component {
-    constructor(props) {
-        super(props);
-        this.keyPress = this.keyPress.bind(this);
-     } 
-     keyPress(e){
-        if(e.keyCode == 13){
-           this.props.startCountDown();
-        }
-     }
+export class GameStart extends React.Component {
+   
     render() {
         return (
-            React.createElement("div", { className: 'chips-input' },
-                inputText,
-                
-                <input type="number" 
-                onChange={this.props.handleChange} onKeyDown={this.keyPress} required />
-                
-                //React.createElement("input", { className: 'input-field', type: 'number', chips: this.props.chips, handleChange: this.props.handleChange, required: true })
-                //InputField(this.props)
+            React.createElement("div", { className: 'game-start' }, startText(this.props.isStarted)
             )
         );
     }
@@ -35,28 +21,28 @@ export class Counter extends React.Component {
         );
     }
 }
-
-//export const Counter = () => {}
-
-
-function initCounter(tokens) {
-    const startMinutes = tokens * 2;
-    return startMinutes;
+export class AddToken extends React.Component {
+    render(){
+        return (
+            <Button variant="contained" color="primary" className="token-btn" onClick={handleClick(this.props)}>
+            {startTextBtn(this.props.isStarted)}
+            </Button>
+        )
+    }
 }
 
-const inputText = (<h3>Input number of starting chips</h3>)
 
-// Hur tusan använder man ett sånt här element?
-// const InField = ({ c }) => {
-//     return {
-//         type: 'h1',
-//         children: c
-//     }
-// }
-
-function InputField(props) {
-    return (
-        <input className='input-field' type='number' chips={props.chips} handleChange={props.handleChange} value={props.chips}required>
-        </input>
-    );
+function startText(started) {
+    if(started) return "Press space to add one token";
+    else return "Press space to start timer";
 }
+
+function startTextBtn(started) {
+    if(started) return "Add token";
+    else return "Start timer";
+}
+
+function handleClick(props){
+    if (props.isStarted) return props.addChip;
+    else  return props.startCountDown;
+  } 

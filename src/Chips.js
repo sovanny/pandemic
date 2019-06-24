@@ -3,19 +3,11 @@ import './chips.css';
 
 class Chip extends React.Component {
     render() {
-        return (
-            <div>
-
-                <div className="chip"></div>
-            </div>
-        )
+        return <div className="chip"></div>
     }
 }
 
 export class Chips extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div>
